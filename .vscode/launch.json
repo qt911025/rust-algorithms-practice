@@ -1,0 +1,234 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'issort'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=issort",
+                    "--",
+                    "--show-output"
+                ],
+                "filter": {
+                    "name": "issort",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'issort'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=issort",
+                    "--package=issort"
+                ],
+                "filter": {
+                    "name": "issort",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'issort'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=issort",
+                    "--package=issort"
+                ],
+                "filter": {
+                    "name": "issort",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'merge_sort'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=merge_sort"
+                ],
+                "filter": {
+                    "name": "merge_sort",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'merge_sort'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=merge_sort",
+                    "--package=merge_sort"
+                ],
+                "filter": {
+                    "name": "merge_sort",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'merge_sort'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=merge_sort",
+                    "--package=merge_sort"
+                ],
+                "filter": {
+                    "name": "merge_sort",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'biheap'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=biheap"
+                ],
+                "filter": {
+                    "name": "biheap",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'biheap'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=biheap",
+                    "--package=biheap"
+                ],
+                "filter": {
+                    "name": "biheap",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'biheap'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=biheap",
+                    "--package=biheap"
+                ],
+                "filter": {
+                    "name": "biheap",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'quick_sort'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=quick_sort"
+                ],
+                "filter": {
+                    "name": "quick_sort",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'quick_sort'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=quick_sort",
+                    "--package=quick_sort"
+                ],
+                "filter": {
+                    "name": "quick_sort",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'quick_sort'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=quick_sort",
+                    "--package=quick_sort"
+                ],
+                "filter": {
+                    "name": "quick_sort",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

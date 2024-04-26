@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "algorithms_prelude",
+    "_2_1_issort",
+    "_2_3_merge_sort",
+    "_4_1_maximum_subarray",
+    "_6_1_biheap_sort",
+    "_7_1_quick_sort",
+    "_8_2_counting_sort", "_8_3_radix_sort", "_8_4_bucket_sort",
+    # "_6_5_biheap_priority_queue",
+]

@@ -1,0 +1,11 @@
+[package]
+name = "bucket_sort"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+conv = "0.3.3"
+issort = { path = "../_2_1_issort" }
+algorithms_prelude = { path = "../algorithms_prelude" }

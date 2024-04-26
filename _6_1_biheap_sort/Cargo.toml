@@ -1,0 +1,8 @@
+[package]
+name = "biheap_sort"
+version = "0.1.0"
+authors = ["quentine <qt911025@qq.com>"]
+edition = "2021"
+
+[dependencies]
+algorithms_prelude = { path = "../algorithms_prelude" }
