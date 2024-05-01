@@ -1,6 +1,7 @@
+mod linked_list_bucket;
+use linked_list_bucket::*;
+
 use conv::*;
-use issort::InsertionSorter;
-use algorithms_prelude::CompareSorter;
 
 // 桶排序
 // 适用于输入元素的值均匀分布在[0,1)，或者能近似线性地建立单射者
@@ -14,15 +15,15 @@ pub fn bucket_sort<T, F>(arr: Vec<T>, mapper: F) -> Result<Vec<T>, &'static str>
     let arr_length = arr.len();
 
     // 建桶
-    let mut buckets: Vec<Vec<(f64, T)>> = Vec::with_capacity(arr_length);
-    buckets.resize_with(arr_length, || Vec::new());
+    let mut buckets: Vec<Bucket<T>> = Vec::with_capacity(arr_length);
+    buckets.resize_with(arr_length, || Bucket::new());
 
     // 进桶
     for e in arr {
         let key = mapper(&e);
         if key >= 0.0 && key < 1.0 {
             let bucket_id = (key * (arr_length as f64)).approx_as::<usize>().unwrap();
-            buckets[bucket_id].push((key, e));
+            buckets[bucket_id].insert(key, e);
         } else {
             return Err("元素值溢出");
         }
@@ -31,11 +32,7 @@ pub fn bucket_sort<T, F>(arr: Vec<T>, mapper: F) -> Result<Vec<T>, &'static str>
     // 排序每个桶，并连接
     let result = buckets
         .into_iter()
-        .flat_map(|mut bucket| {
-            InsertionSorter(&mut bucket).sort_by(|prev, next| prev.0 <= next.0);
-            bucket
-        })
-        .map(|item| item.1)
+        .flat_map(|bucket| bucket)
         .collect();
     Ok(result)
 }
